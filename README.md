@@ -26,3 +26,9 @@ lúc đang xem cuốn catalô mới ra của Amasson&.
 ```
 
 This project is using Angular 5, Franc, ... Make edit file script VNs more faster, the life more confident.
+
+## How I do 
+First I split each the sentence and modify it without '/@\' or some work is japanese or vietnamese
+Finally check it the english with point >= 0.9999999999 
+If true remove that sentence
+
