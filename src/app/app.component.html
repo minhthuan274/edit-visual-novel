@@ -1,18 +1,31 @@
 
 <div class="container">
   <h1 class="text-center">Edit visual novel</h1>
+  <button (click)="checkText()" type="submit" class="btn btn-primary">Submit</button>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <textarea
-      [(ngModel)]="text"
-      type="text" class="form-control" placeholder="Enter script"
-      (keyup.enter)="checkText()"
-      rows="20">
-    </textarea>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="exampleInputEmail1">First text</label>
+        <textarea
+          [(ngModel)]="text"
+          type="text" class="form-control" placeholder="Enter script"
+          (keyup.enter)="checkText()"
+          rows="20">
+        </textarea>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="exampleInputEmail1">After</label>
+        <textarea rows="20" [(ngModel)]="text_after_edit" class="form-control"></textarea>
+
+      </div>
+    </div>
   </div>
 
-  <button (click)="checkText()" type="submit" class="btn btn-primary">Submit</button>
+
 
 
 </div>

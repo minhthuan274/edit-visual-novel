@@ -23,4 +23,9 @@ fdescribe('Test can delete', () => {
     expect(checkCanDelete(text)).toBeFalsy();
   });
 
+  fit("should 4nd test case", () => {
+    let text = '-se sound="破壊１.ogg", ch=12';
+    expect(checkCanDelete(text)).toBeFalsy();
+  });
+
 });
