@@ -1,10 +1,10 @@
 # EditVisualNovel
 
-
 ## Purpose of project
 
 That project will help user to easier to edit file script like:
-
+Link demo: https://minhthuan274.github.io/edit-visual-novel/
+But it doesn't aware what language right 100% so after edit we must use https://text-compare.com/ to check
 ```sh
 @action
 -message id="孫子"
