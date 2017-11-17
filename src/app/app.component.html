@@ -4,10 +4,12 @@
 
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input
+    <textarea
       [(ngModel)]="text"
-      type="text" class="form-control" placeholder="Enter email"
-      (keyup.enter)="checkText()">
+      type="text" class="form-control" placeholder="Enter script"
+      (keyup.enter)="checkText()"
+      rows="20">
+    </textarea>
   </div>
 
   <button (click)="checkText()" type="submit" class="btn btn-primary">Submit</button>
