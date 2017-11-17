@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-declare var Franc: any;
+// tslint:disable-next-line:prefer-const
+import * as franc from "franc";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,14 +9,17 @@ declare var Franc: any;
 export class AppComponent implements OnInit {
   title = 'app';
   franc: any;
+  text: string;
 
   constructor() {
 
   }
 
   ngOnInit() {
-    this.franc = new Franc();
-    let text = 'Hi everyone';
-    console.log(this.franc(text));
+  }
+
+  checkText() {
+    console.log(franc.all(this.text, {whitelist: ['eng', 'vie', 'jpn']}));
+    this.text = '';
   }
 }
