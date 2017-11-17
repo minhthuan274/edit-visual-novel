@@ -34,4 +34,9 @@ export class AppComponent implements OnInit {
     this.text_after_edit = splits_after_delete.join('\n');
   }
 
+  clear() {
+    this.text = "";
+    this.text_after_edit = "";
+  }
+
 }
