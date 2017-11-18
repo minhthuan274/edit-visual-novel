@@ -27,7 +27,7 @@ lúc đang xem cuốn catalô mới ra của Amasson&.
 
 This project is using Angular 5, Franc, ... Make edit file script VNs more faster, the life more confident.
 
-#Remove blank line
+## Remove blank line
 That feature I found when I did the edit tool, The issue after use edit tool that has one line blank before script like
 ```sh
 @action
