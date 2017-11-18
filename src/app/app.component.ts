@@ -39,4 +39,25 @@ export class AppComponent implements OnInit {
     this.text_after_edit = "";
   }
 
+  removeBlankLine(senteces: string[]) {
+    while (true) {
+      let index = _.findIndex(senteces, sentence => {
+        return _.includes(sentence, "-message id=");
+      });
+      if (senteces[index + 1] === '') {
+        senteces.splice(index + 1, 1);
+      }
+      else {
+        break;
+      }
+    }
+    return senteces;
+  }
+
+  removeBlank() {
+    let senteces = _.split(this.text_after_edit, '\n');
+    senteces = this.removeBlankLine(senteces);
+    this.text_after_edit = senteces.join('\n');
+  }
+
 }
