@@ -5,33 +5,30 @@ import * as _ from 'lodash';
 import { checkCanDelete, checkSystem } from './utility/utility-check';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  title = 'app';
+  title = "app";
   franc: any;
   text: string;
   text_after_edit: string;
 
-  constructor() {
+  constructor() {}
 
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   checkText() {
     this.text_after_edit = "";
     let splits_after_delete = [];
-    let splits = _.split(this.text, '\n');
+    let splits = _.split(this.text, "\n");
     _.forEach(splits, sentence => {
       if (!checkCanDelete(sentence)) {
         splits_after_delete.push(sentence);
       }
     });
-    this.text_after_edit = splits_after_delete.join('\n');
+    this.text_after_edit = splits_after_delete.join("\n");
   }
 
   clear() {
@@ -39,25 +36,23 @@ export class AppComponent implements OnInit {
     this.text_after_edit = "";
   }
 
-  removeBlankLine(senteces: string[]) {
-    while (true) {
-      let index = _.findIndex(senteces, sentence => {
-        return _.includes(sentence, "-message id=");
-      });
-      if (senteces[index + 1] === '') {
-        senteces.splice(index + 1, 1);
+  removeBlankLine(sentences: string[]) {
+    let new_sentences = [];
+    new_sentences.push(sentences[0]);
+    for (let i = 1; i < sentences.length; i++) {
+      if (sentences[i - 1].indexOf("-message") > -1 && sentences[i] === '') {
+
       }
       else {
-        break;
+        new_sentences.push(sentences[i]);
       }
     }
-    return senteces;
+    return new_sentences;
   }
 
   removeBlank() {
-    let senteces = _.split(this.text_after_edit, '\n');
+    let senteces = _.split(this.text_after_edit, "\n");
     senteces = this.removeBlankLine(senteces);
-    this.text_after_edit = senteces.join('\n');
+    this.text_after_edit = senteces.join("\n");
   }
-
 }
