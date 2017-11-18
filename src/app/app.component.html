@@ -1,11 +1,13 @@
 
 <div class="container">
   <h1 class="text-center">Edit visual novel</h1>
-  <button (click)="checkText()" type="submit" class="btn btn-primary">Submit</button>
-  <button (click)="clear()" class="btn btn-delete">Reset</button>
+  <button (click)="checkText()" type="submit" class="btn btn-primary pointer">Submit</button>
+  <button (click)="clear()" class="btn btn-delete pointer">Reset</button>
+  <hr>
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
+        <button type="submit" class="btn btn-info pointer" ngxClipboard [cbContent]="text">Copy</button>
         <label for="exampleInputEmail1">First text</label>
         <textarea
           [(ngModel)]="text"
@@ -18,6 +20,7 @@
 
     <div class="col-md-6">
       <div class="form-group">
+        <button type="submit" class="btn btn-info pointer" ngxClipboard [cbContent]="text_after_edit">Copy</button>
         <label for="exampleInputEmail1">After</label>
         <textarea rows="20" [(ngModel)]="text_after_edit" class="form-control"></textarea>
 
