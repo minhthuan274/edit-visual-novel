@@ -11,7 +11,8 @@ export const tests: string[] = [
   "name=",
   "id=",
   "effect=",
-  "sound="
+  "sound=",
+  "blend="
 ];
 
 export function checkSystem(sentence: string): boolean {
