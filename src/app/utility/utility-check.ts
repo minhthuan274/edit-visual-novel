@@ -13,7 +13,9 @@ export const tests: string[] = [
   "effect=",
   "sound=",
   "blend=",
-  ":embed_page"
+  ":embed_page",
+  "time=",
+  "-se_stop"
 ];
 
 export function checkSystem(sentence: string): boolean {
