@@ -15,7 +15,8 @@ export const tests: string[] = [
   "blend=",
   ":embed_page",
   "time=",
-  "-se_stop"
+  "-se_stop",
+  "-message_hide"
 ];
 
 export function checkSystem(sentence: string): boolean {

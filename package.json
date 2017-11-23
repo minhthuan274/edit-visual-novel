@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href=https://minhthuan274.github.io/edit-visual-novel/ && ngh"
+    "deploy": "ng build --prod --aot --base-href=https://minhthuan274.github.io/edit-visual-novel/ && ngh"
   },
   "private": true,
   "dependencies": {
